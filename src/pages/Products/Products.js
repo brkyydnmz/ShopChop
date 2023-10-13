@@ -1,18 +1,18 @@
 import React from 'react';
-import {View, FlatList, Button} from 'react-native';
+import {View, FlatList, Text} from 'react-native';
 import Config from 'react-native-config';
 
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch';
 import Loading from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
-import {useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 //YUKARIYA ARAMA BUTONU EKLENEBİLİR
 //https://fakestoreapi.com/products/categories BURDAN KATEGORİLERİ GETİREBİLİRSİN. CATEGORY GÖRE FİLTRELEME EKLENEBİLİR.
 
 const Products = ({navigation}) => {
-  const dispatch = useDispatch();
+  const user = useSelector(s => s.user);
   const {loading, data, error} = useFetch(Config.API_URL); //custom hookumuzdan kullandık.
 
   const handleProductSelect = id => {
@@ -33,10 +33,7 @@ const Products = ({navigation}) => {
 
   return (
     <View>
-      <Button
-        title="Logout"
-        onPress={() => dispatch({type: 'SET_USER', payload: {user: null}})}
-      />
+      <Text>Hello: {user.name.firstname + ' ' + user.name.lastname}</Text>
       <FlatList data={data} renderItem={renderProduct} />
     </View>
   );
