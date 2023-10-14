@@ -33,7 +33,9 @@ const Products = ({navigation}) => {
 
   return (
     <View>
-      <Text>Hello: {user.name.firstname + ' ' + user.name.lastname}</Text>
+      {user && user.name && (
+        <Text>Hello: {user.name.firstname + ' ' + user.name.lastname}</Text>
+      )}
       <FlatList data={data} renderItem={renderProduct} />
     </View>
   );
