@@ -462,7 +462,7 @@ PODS:
     - React-Core
   - RNCMaskedView (0.1.11):
     - React
-  - RNGestureHandler (2.12.0):
+  - RNGestureHandler (2.9.0):
     - React-Core
   - RNReanimated (3.3.0):
     - DoubleConversion
@@ -738,7 +738,7 @@ SPEC CHECKSUMS:
   ReactCommon: a77b3916d0d39113b5f0de714a0acd47c9d17c3a
   RNCAsyncStorage: c913ede1fa163a71cea118ed4670bbaaa4b511bb
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
-  RNGestureHandler: dec4645026e7401a0899f2846d864403478ff6a5
+  RNGestureHandler: 071d7a9ad81e8b83fe7663b303d132406a7d8f39
   RNReanimated: 3ffa3d63576ecd26a4f8772d03029cccaf41b5d7
   RNScreens: 50ffe2fa2342eabb2d0afbe19f7c1af286bc7fb3
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
@@ -747,4 +747,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 67212adb823c7e25eb4f588b860538b57cf33534
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.2
